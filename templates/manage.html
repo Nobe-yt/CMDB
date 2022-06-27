@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理界面</title>
+</head>
+<body>
+<form action="/manage" method="post">
+    <input type="text" name="sh">
+
+    <input type="button" style="background-color:#0cc755;opacity:0.5;" value="执行" onclick="if(confirm('请确认是否执行？')){this.form.submit();}">
+
+    <div style="color: #f50635">
+        命令：<span>{{ sh }}</span>
+    </div>
+</form>
+<div class="login-01">
+   <form>
+      <li class="second">
+          <a href="#" class=" icon phone"></a>
+          <textarea disabled value="Message" style="width: 100%; height: 800px"  onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = '命令输出结果';}">{{ output }}</textarea>
+          <div class="clear"></div>
+      </li>
+    </form>
+</div>
+</body>
+</html>
